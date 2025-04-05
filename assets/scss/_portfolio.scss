@@ -50,35 +50,46 @@
   align-content: center;
   font-size: 16px;
   line-height: 1;
-  background: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   border: 2px solid var(--color);
   padding: 10px 20px;
   white-space: nowrap;
   color: var(--color);
-  transition: 0.3s;
+  transition: border 0.3s, color 0.3s, background-color 0.3s;
+  &.portfolio__load-more {
+    &.loading {
+      font-size: 0px;
+      background-color: var(--color);
+    }
+    &:hover {
+      color: #fff;
+      background-color: var(--color);
+      border: 2px solid var(--color);
+    }
+  }
   &:hover {
     color: #fff;
-    background: #84afa1;
+    background-color: #84afa1;
     border: 2px solid #84afa1;
   }
   &.active {
     color: #fff;
-    background: var(--color);
+    background-color: var(--color);
     border: 2px solid var(--color);
-    &.loading {
-      color: rgba(0, 0, 0, 0);
-      &:before {
-        content: '';
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        border-left: 2px solid #fff;
-        border-top: 2px solid #fff;
-        border-right: 2px solid rgba(0, 0, 0, 0);
-        border-bottom: 2px solid rgba(0, 0, 0, 0);
-        border-radius: 10px;
-        animation: rotate 0.3s linear infinite;
-      }
+  }
+  &.loading {
+    color: rgba(0, 0, 0, 0);
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      border-left: 2px solid #fff;
+      border-top: 2px solid #fff;
+      border-right: 2px solid rgba(0, 0, 0, 0);
+      border-bottom: 2px solid rgba(0, 0, 0, 0);
+      border-radius: 10px;
+      animation: rotate 0.3s linear infinite;
     }
   }
 }
@@ -103,14 +114,17 @@
   gap: 28px;
   opacity: 0;
   transition: opacity 0.3s;
+  margin-bottom: 28px;
   &.active {
     opacity: 1;
   }
   @media (max-width: 1279px) {
     gap: 16px;
+    margin-bottom: 16px;
   }
   @media (max-width: 767px) {
     gap: 14px;
+    margin-bottom: 14px;
   }
 
   li {
