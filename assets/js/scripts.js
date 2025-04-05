@@ -61,7 +61,7 @@ const createPortfolioMarkup = ({ category, items }, append = false) => {
 };
 
 const changePrtfolioCategory = async e => {
-  if (!e.target.dataset.category) return;
+  if (!e.target.dataset.category || e.target.classList.contains('active')) return;
 
   const activeButton = document.querySelector('.portfolio__button.active');
   const button = e.target;

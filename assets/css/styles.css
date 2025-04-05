@@ -444,6 +444,10 @@ svg {
   white-space: nowrap;
   color: var(--color);
   transition: border 0.3s, color 0.3s, background-color 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .portfolio__button.portfolio__load-more.loading {
   font-size: 0px;
@@ -463,6 +467,8 @@ svg {
   color: #fff;
   background-color: var(--color);
   border: 2px solid var(--color);
+  cursor: auto;
+  pointer-events: none;
 }
 .portfolio__button.loading {
   color: rgba(0, 0, 0, 0);
