@@ -1,0 +1,112 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1.12;
+  font-family: var(--regular);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  &:disabled {
+    cursor: auto;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+svg {
+  fill: currentColor;
+}
+
+.color {
+  color: var(--color);
+}
+
+.show_inMobil {
+  display: none;
+}
+
+[data-error] {
+  @media (min-width: 1400px) {
+    max-width: 370px;
+  }
+  @media (min-width: 1280px) and (max-width: 1399px) {
+    max-width: 420px;
+  }
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    max-width: 380px;
+  }
+  @media (max-width: 1023px) {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .del_inTablet {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .del_inMobil {
+    display: none;
+  }
+  .show_inMobil {
+    display: block;
+  }
+}

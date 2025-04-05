@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <title>Миллениум</title>
+  </head>
+  <body class="body">
+    <!--HEADER-->
+    <header class="header">
+      <a href="https://milleniumstyle.ru/" class="logo">
+        <img src="./assets/img/logo.svg" alt="Миллениум салон красоты в г. Долгопрудный" />
+      </a>
+      <nav class="navigation">
+        <ul class="menu">
+          <li><a href="tel:84993221216" class="link">8 (499) 322-12-16</a></li>
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=79264421003&text=&source=&data=" class="button social" target="_blank">
+              <img src="./assets/img/watsup.svg" alt="Миллениум салон красоты в г. Долгопрудный" />
+            </a>
+          </li>
+          <li>
+            <a href="https://widget.universecrm.ru/v2//minisite/981940abe032f082b1d7df2a9c564a2d#/" class="button mini" target="_blank"
+              >ОНЛАЙН ЗАПИСЬ</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button class="burger" data-js="burger"><span>Бургер меню</span></button>
+    </header>
+
+    <!--MAIN-->
+    <main class="main swiper">
+      <div class="swiper-wrapper">
+        <!--SLIDE 1-->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="inputs">
+              <div class="text-content">
+                <h1 class="title title--h1 color">Дарим купон на 1.000₽</h1>
+                <p class="subtitle">в центр красоты и косметологии Millenium в <span id="month"></span></p>
+              </div>
+
+              <div class="text-content">
+                <img src="./assets/img/slides/1_mobil.webp" alt="Миллениум салон красоты в г. Долгопрудный" class="heroImage show_inMobil" />
+                <b class="title title--h2">Пройдите опрос за 1 минуту</b>
+                <p class="subtitle">получите купон на любую услугу</p>
+              </div>
+
+              <button type="button" class="button" data-js="next">Пройти опрос</button>
+            </div>
+            <ul class="about">
+              <li>
+                <img src="./assets/img/about1.svg" alt="Миллениум салон красоты в г. Долгопрудный" />
+                <span>Цены доступные <br />каждому</span>
+              </li>
+              <li>
+                <img src="./assets/img/about2.svg" alt="Миллениум салон красоты в г. Долгопрудный" />
+                <span>Современное <br />оборудование</span>
+              </li>
+              <li>
+                <img src="./assets/img/about3.svg" alt="Миллениум салон красоты в г. Долгопрудный" />
+                <span>Лучшие <br />специалисты</span>
+              </li>
+            </ul>
+          </div>
+          <picture class="slideImage del_inMobil">
+            <img src="./assets/img/slides/1.webp" alt="Миллениум салон красоты в г. Долгопрудный" />
+          </picture>
+        </div>
+
+        <!--SLIDE 2-->
+        <div class="swiper-slide" data-step="location">
+          <div class="container">
+            <div class="inputs">
+              <div class="text-content">
+                <h2 class="title title--h2">Вы проживаете в г.Долгопрудный?</h2>
+              </div>
+              <fieldset class="fieldset">
+                <label class="label"><input type="radio" name="city" value="Да" data-js="input" /><span>Да</span></label>
+                <label class="label"><input type="radio" name="city" value="Нет" data-js="input" /><span>Нет</span></label>
+              </fieldset>
+              <button type="button" class="button" data-js="next" disabled>Далее</button>
+            </div>
+          </div>
+          <picture class="slideImage">
+            <img src="./assets/img/slides/2.webp" alt="Миллениум салон красоты в г. Долгопрудный" />
+          </picture>
+        </div>
+
+        <!--SLIDE 3-->
+        <div class="swiper-slide" data-step="do-you-know-us">
+          <div class="container">
+            <div class="inputs">
+              <div class="text-content">
+                <h2 class="title title--h2">Знакомы ли с центром красоты <br />и косметологии Millenium?</h2>
+              </div>
+              <fieldset class="fieldset">
+                <label class="label"><input type="radio" name="know" value="Да" data-js="input" /><span>Да</span></label>
+                <label class="label"><input type="radio" name="know" value="Нет" data-js="input" /><span>Нет</span></label>
+              </fieldset>
+              <button type="button" class="button" data-js="next" disabled>Далее</button>
+            </div>
+          </div>
+          <picture class="slideImage">
+            <img src="./assets/img/slides/3.webp" alt="Миллениум салон красоты в г. Долгопрудный" />
+          </picture>
+        </div>
+
+        <!--SLIDE 4-->
+        <div class="swiper-slide" data-step="what-sevices">
+          <div class="container">
+            <div class="inputs">
+              <div class="text-content">
+                <h2 class="title title--h2">Какие услуги красоты обычно <br />оказываете в салонах красоты?</h2>
+              </div>
+              <fieldset class="fieldset">
+                <label class="label">
+                  <input type="checkbox" name="beautyServices" value="Парикмахерские услуги" data-js="input" />
+                  <span>Парикмахерские услуги</span>
+                </label>
+                <label class="label">
+                  <input type="checkbox" name="beautyServices" value="Ногтевой сервис" data-js="input" />
+                  <span>Ногтевой сервис</span>
+                </label>
+                <label class="label">
+                  <input type="checkbox" name="beautyServices" value="Брови/ресницы" data-js="input" />
+                  <span>Брови/ресницы</span>
+                </label>
+                <label class="label">
+                  <input type="checkbox" name="beautyServices" value="Косметологические" data-js="input" />
+                  <span>Косметологические</span>
+                </label>
+                <label class="label">
+                  <input type="text" name="beautyServices" value="" data-js="input" placeholder="вписать текст" />
+                </label>
+              </fieldset>
+              <button type="button" class="button" data-js="next" disabled>Далее</button>
+            </div>
+          </div>
+          <picture class="slideImage">
+            <img src="./assets/img/slides/4.webp" alt="Миллениум салон красоты в г. Долгопрудный" />
+          </picture>
+        </div>
+
+        <!--SLIDE 5-->
+        <div class="swiper-slide" data-step="your-phone">
+          <div class="container">
+            <div class="inputs">
+              <div class="text-content">
+                <h2 class="title title--h2">Заполните форму, чтобы получить <br class="del_inTablet" />купон 1.000₽ на любую услугу</h2>
+              </div>
+              <fieldset class="fieldset">
+                <label class="label">
+                  <input type="tel" name="phone" value="" data-js="input" placeholder="+7 (999) 999-99-99" />
+                </label>
+                <label class="label label--mini">
+                  <input type="checkbox" name="agree" value="Cоглашаюсь на обработку персональных данных" data-js="input" />
+                  <span>Cоглашаюсь на обработку&nbsp;<a href="https://milleniumstyle.ru/pdf/policy.pdf" target="_blank">персональных данных</a></span>
+                </label>
+              </fieldset>
+              <button type="button" class="button" data-js="submit" disabled>Получить купон</button>
+            </div>
+          </div>
+          <picture class="slideImage">
+            <img src="./assets/img/slides/1.webp" alt="Миллениум салон красоты в г. Долгопрудный" />
+          </picture>
+        </div>
+
+        <!--SLIDE SUCCSESS-->
+        <div class="swiper-slide" data-step="success">
+          <div class="container">
+            <div class="inputs">
+              <div class="text-content">
+                <h2 class="title title--result">Успешно!</h2>
+                <p class="subtitle" data-success>Спасибо, данные успешно сохранены!</p>
+                <p class="subtitle subtitle--dop">в ближайшее время администратор <br />центра Millenium свяжется с Вами</p>
+              </div>
+              <a href="https://milleniumstyle.ru/" class="button">На главную</a>
+            </div>
+          </div>
+          <picture class="slideImage slideImage--success">
+            <img src="./assets/img/slides/5.webp" alt="Миллениум салон красоты в г. Долгопрудный" />
+          </picture>
+        </div>
+
+        <!--SLIDE ERROR-->
+        <div class="swiper-slide" data-step="error">
+          <div class="container">
+            <div class="inputs">
+              <div class="text-content">
+                <p class="subtitle" data-error>Что-то пошло не так...</p>
+              </div>
+              <a href="https://milleniumstyle.ru/" class="button">На главную</a>
+            </div>
+          </div>
+          <picture class="slideImage">
+            <img src="./assets/img/slides/2.webp" alt="Миллениум салон красоты в г. Долгопрудный" />
+          </picture>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/form.js" type="module"></script>
+    <script src="./assets/js/send.js" type="module"></script>
+    <script src="./assets/js/slider.js" type="module"></script>
+    <script src="./assets/js/scripts.js" type="module"></script>
+  </body>
+</html>

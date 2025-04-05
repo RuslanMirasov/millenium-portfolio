@@ -1,0 +1,151 @@
+.text-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  display: block;
+  line-height: 1.12;
+  &.title--result {
+    font-size: 80px;
+    @media (max-width: 1024px) {
+      font-size: 50px;
+    }
+  }
+}
+
+.subtitle {
+  display: block;
+  line-height: 1.12;
+  span {
+    font-size: inherit;
+    display: inline-block;
+    width: auto;
+  }
+  &.subtitle--dop {
+    opacity: 0.7;
+    padding-top: 14px;
+  }
+}
+
+// 1440 и выше
+@media (min-width: 1400px) {
+  .text-content {
+    gap: 8px;
+  }
+
+  .title {
+    &.title--h1 {
+      font-size: 64px;
+    }
+    &.title--h2 {
+      font-size: 36px;
+    }
+  }
+
+  .subtitle {
+    font-size: 24px;
+    &.subtitle--dop {
+      font-size: 18px;
+    }
+  }
+}
+
+// c 1280 до 1440
+@media (min-width: 1280px) and (max-width: 1399px) {
+  .text-content {
+    gap: 4px;
+  }
+
+  .title {
+    &.title--h1 {
+      font-size: 48px;
+    }
+    &.title--h2 {
+      font-size: 30px;
+    }
+  }
+
+  .subtitle {
+    font-size: 20px;
+    &.subtitle--dop {
+      font-size: 16px;
+    }
+  }
+}
+
+// c 320 до 1440
+@media (max-width: 1279px) {
+  .text-content {
+    gap: 4px;
+  }
+
+  .title {
+    &.title--h1 {
+      font-size: 40px;
+    }
+    &.title--h2 {
+      font-size: 28px;
+    }
+  }
+
+  .subtitle {
+    font-size: 14px;
+    &.subtitle--dop {
+      font-size: 12px;
+    }
+  }
+
+  .text-content:first-child {
+    .subtitle {
+      font-size: 18px;
+      &.subtitle--dop {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    &.title--h1 {
+      font-size: 28px;
+    }
+    &.title--h2 {
+      font-size: 20px;
+    }
+  }
+  .text-content:first-child {
+    .subtitle {
+      font-size: 12.5px;
+      &.subtitle--dop {
+        font-size: 12.5px;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+#month {
+  background: var(--color);
+  color: var(--white);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/*
+// 1440 и выше
+@media (min-width: 1400px) {}
+
+// c 1280 до 1440
+@media (min-width: 1280px) and (max-width: 1399px) {}
+
+// c 1024 до 1279
+@media (min-width: 1024px) and (max-width: 1279px) {}
+
+// c 320 до 1440
+@media (max-width: 1023px) {}
+*/

@@ -1,0 +1,141 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  padding: 14px 20px;
+  background: var(--white);
+  z-index: 10;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 160px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.link {
+  font-size: 14px;
+  font-family: var(--medium);
+  transition: 0.3s;
+  &:hover {
+    color: var(--color);
+  }
+}
+
+.burger {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: none;
+  &:before,
+  &:after {
+    content: '';
+  }
+  &:before,
+  &:after,
+  span {
+    width: 100%;
+    height: 2px;
+    background: var(--black);
+    position: absolute;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  span {
+    font-size: 0px;
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  &:before {
+    transform: rotate(0deg) translate(0px, -7px);
+  }
+  &:after {
+    transform: rotate(-0deg) translate(0px, 7px);
+  }
+
+  &.open {
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+    span {
+      font-size: 0px;
+      transform: translate(100%, 0%);
+      opacity: 0;
+    }
+  }
+}
+
+@media (min-width: 560px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media (max-width: 559px) {
+  .navigation {
+    position: absolute;
+    background: var(--white);
+    border-top: 1px solid var(--bg);
+    width: 100%;
+    left: 0px;
+    top: 100%;
+    z-index: 0;
+    padding: 20px;
+    transition: 0.6s;
+    transform: translate(100%, 0%);
+    &.open {
+      transform: translate(0%, 0%);
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .menu {
+    width: 100%;
+    justify-content: flex-end;
+    gap: 12px;
+    li:first-child {
+      margin-right: auto;
+    }
+  }
+}
+
+@media (max-width: 359px) {
+  .menu {
+    gap: 10px;
+    .link {
+      font-size: 11px;
+    }
+    .mini {
+      padding: 10px 14px;
+    }
+  }
+}
